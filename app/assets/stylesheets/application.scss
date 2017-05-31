@@ -128,3 +128,34 @@
 
   text-decoration: none;
  }
+ //------------注册页面美化
+ .form-group1 {
+   margin: auto;
+   position: relative;
+   left: 0;
+   top: 0;
+   bottom: 0;
+   height: 100px;
+   right: 0;
+   width: 280px;
+ }
+ .form-group1 input {
+   border: none;
+   color: #808284;
+   font-weight: 400;
+   padding: 40px 0px 10px 0px;
+   background: transparent;
+   letter-spacing: 1px;
+   outline: none;
+   font-family: "Lato", sans-serif;
+   height: 30px;
+   width: 280px;
+   -webkit-transition-property: -webkit-transform;
+   transition-property: -webkit-transform;
+   transition-property: transform;
+   transition-property: transform, -webkit-transform;
+   font-size: 14px;
+   box-shadow: 0px 1px #808284;
+ }
+
+ 
