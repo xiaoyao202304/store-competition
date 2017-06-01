@@ -1,9 +1,28 @@
 <br><br>
 
 
-<div class="row">
-  <% @products.each do |product| %>
-    <div class="col-xs-6 col-md-4">
+       <div class="jumbotron">
+         <div class="row">
+
+          <h3>Women's All</h3>
+          <p>
+            <a href="#">
+              <img src="">
+            </a>
+          </p>
+          <p><a class="btn btn-zdy btn-lg" href="#" role="button">Shop more</a></p>
+        </div>
+      </div>
+<br><br>
+
+
+<br><br>
+
+
+
+    <% @products.each do |product| %>
+    <div class="col-xs-1 col-md-4">
+
       <%= link_to product_path(product) do %>
         <% if product.image.present? %>
           <%= image_tag(product.image.thumb.url, class: "thumbnail1") %>
@@ -11,7 +30,28 @@
           <%= image_tag("http://placehold.it/500x500&text=No Pic", class: "thumbnail1") %>
         <% end %>
       <% end %>
-      <%= product.title %> ￥ <%= product.price %><hr>
+
+      <div class="product-details">
+
+          <a href="#" class="clearfix product__link">
+              <h4 class="product__name">
+                <%= product.title %>
+              </h4>
+          </a>
+
+            <span class="product__price">
+              $<%= product.price %>
+            </span>
+
+              <h4 class="product__label">  </h4>
+                  <span class="product__color">
+                    Color
+                  </span>
+
+              <div class="product__additional-colors">
+                  <a href="#" class="product__link"> </a>
+              </div>
+      </div>
     </div>
   <% end %>
 </div>
