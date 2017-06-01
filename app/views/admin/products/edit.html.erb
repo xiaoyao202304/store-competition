@@ -26,6 +26,10 @@
     <%= f.input :image, as: :file %>
   </div>
 
+  <div class="group">
+    <%= f.input :category, :as => :radio_buttons, :collection => Product::CATEGORY, :item_wrapper_class => 'inline' %>
+  </div>
+
 
   <%= f.submit "Submit", data: { disable_with: "Submitting..." } %>
 <% end %>

@@ -1,6 +1,18 @@
 class ProductsController < ApplicationController
   def index
     @products = Product.all
+    @products = case params[:category]
+            when 'Tees'
+              Product.where(:category => "Tees")
+            when 'Shirts'
+              Product.where(:category => "Shirts")
+            when 'Dresses'
+              Product.where(:category => "Dresses")
+            when 'Accessories'
+              Product.where(:category => "Accessories")
+            else
+              Product.all
+            end
   end
 
   def show

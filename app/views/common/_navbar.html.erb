@@ -9,6 +9,16 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
             <li class="active"><%= link_to("Home", products_path) %></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Category <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><%= link_to("Tees", products_path(:category => "Tees")) %></li>
+                <li><%= link_to("Shirts", products_path(:category => "Shirts")) %></li>
+                <li><%= link_to("Dresses", products_path(:category => "Dresses")) %></li>
+                <li><%= link_to("Accessories", products_path(:category => "Accessories")) %></li>
+              </ul>
+            </li>
+            <li class="active"><%= link_to("Favorites", products_path) %></li>
           </ul>
             <ul class="nav navbar-nav navbar-right">
               <li>
