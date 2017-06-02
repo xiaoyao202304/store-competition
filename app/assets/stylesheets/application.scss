@@ -171,6 +171,15 @@
      background-color: #fff;
      height: 300px;
    }
+   .thumbnail2 {
+       display: block;
+
+
+
+       line-height: 1.42857143;
+       background-color: #fff;
+       height: 80px;
+     }
 
 //-----------产品主页面调整
 .product-details {
@@ -245,7 +254,7 @@ line-height: 1;
 }
 //-------购物车页面修改
 .panel-default1 {
-  border-bottom: 1px solid #dfe0e1
+  border-bottom: 0px solid #dfe0e1；
 
 }
 
@@ -255,6 +264,10 @@ line-height: 1;
     border-color: #dfe0e1;
 }
 .panel-body1{
-  background-color: #FAFAFA;
-  padding: 20px;
+  display: block;
+  line-height: 1.42857143;
+  background-color: #fff;
+
+
+
 }

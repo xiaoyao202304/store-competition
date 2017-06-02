@@ -2,16 +2,19 @@
 
 
 <div class="container">
-
+<div class="row">
     <!--Current Cart-->
     <div class="col-md-9">
       <div class="col-md-12">
         <%= link_to("Remove all", clean_carts_path, method: :delete, class: "pull-right",
         style: "text-decoration: underline;", data: {confirm: "Are you sure Remove all ？"} ) %>
       </div>
-
+      <%= link_to("←Back to Shopping", products_path) %>
       <div class="panel panel-default1">
-          <div class="panel-heading text-center"><h4>Current Cart</h4></div>
+
+          <div class="panel-heading text-center">
+            <h4>Current Cart</h4>
+          </div>
           <div class="panel-body">
              <table class="table borderless">
                <thead>
@@ -33,9 +36,9 @@
             <td class="col-md-3">
               <%= link_to product_path(cart_item.product) do %>
                 <% if cart_item.product.image.present? %>
-                  <%= image_tag(cart_item.product.image.thumb.url, class: "thumbnail") %>
+                  <%= image_tag(cart_item.product.image.thumb.url, class: "thumbnail2") %>
                 <% else %>
-                  <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
+                  <%= image_tag("http://placehold.it/100x100&text=No Pic", class: "thumbnail2") %>
                 <% end %>
               <% end %>
                   </td>
@@ -65,7 +68,7 @@
                     </td>
             </tr>
 
-            <tr>
+
 
 
 
@@ -77,6 +80,7 @@
       </div>
     </div>
 
+
 <!--购物车review order页面-->
 <div class="container">
 <div class="row">
@@ -84,14 +88,16 @@
   <div class="col-md-3">
 
           <!--REVIEW ORDER-->
-          <div class="panel panel-default">
+          <div class="panel panel-default panel-default">
               <div class="panel-heading text-center">
                   <h4>Order Summary</h4>
               </div>
               <div class="panel-body1">
                       <div class="col-md-12">
                           <strong>Subtotal </strong>
-                          <div class="pull-right"><span>$</span><span><%= render_cart_total_price(current_cart) %></span></div>
+                          <div class="pull-right"><span>$</span>
+                            <span><%= render_cart_total_price(current_cart) %></span>
+                          </div>
                       </div>
 
                       <div class="col-md-12">
