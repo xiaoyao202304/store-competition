@@ -271,3 +271,26 @@ line-height: 1;
 
 
 }
+//-------------
+.list-group-item{
+    border: 0;
+    padding-left: 0;
+    border-top: 1px solid;
+    border-color: rgba(37,40,43,0.1);
+}
+.list-group .list-group-item:first-child{
+    border:0;
+}
+.list-group .list-group-item a{
+    color: #808284;
+    cursor: pointer;
+    text-decoration: none;
+}
+.list-group.list-group-header{
+    padding:0;
+    margin:0;
+}
+.list-group-panel{
+    border: 1px solid #dfe0e1;
+    border-radius: 0;
+}

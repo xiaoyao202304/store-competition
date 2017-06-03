@@ -1,7 +1,7 @@
 
 
 <div class="panel-heading text-center">
-    <h4>Please enter your shipping address</h4>
+    <h4>Please enter your <br>shipping address</h4>
 </div>
 
 <div class="container">
@@ -11,19 +11,19 @@
     <div class="order-form">
       <%= simple_form_for @order do |f| %>
 
-        <legend>Ordering</legend>
-        <div class="form-group col-lg-6">
+        <legend>Shipping Info</legend>
+        <div class="form-group col-md-6">
           <%= f.input :billing_name %>
         </div>
-        <div class="form-group col-lg-6">
+        <div class="form-group col-md-6">
           <%= f.input :billing_address %>
         </div>
 
         <legend>Shipping</legend>
-        <div class="form-group col-lg-6">
+        <div class="form-group col-md-6">
           <%= f.input :shipping_name %>
         </div>
-        <div class="form-group col-lg-6">
+        <div class="form-group col-md-6">
           <%= f.input :shipping_address %>
         </div>
 
@@ -33,15 +33,12 @@
       <% end %>
     </div>
   </div>
-</div>
-</div>
-</div>
-</div>
 
-<!--购物车review order页面-->
+
+<!--支付订单review order页面-->
 <div class="container">
 <div class="row">
-
+ <br>
   <div class="col-md-3">
 
           <!--REVIEW ORDER-->
