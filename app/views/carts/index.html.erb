@@ -35,8 +35,12 @@
             <!--产品图片区域-->
             <td class="col-md-3">
               <%= link_to product_path(cart_item.product) do %>
-                <% if cart_item.product.image.present? %>
-                  <%= image_tag(cart_item.product.image.url, class: "thumbnail4") %>
+
+               
+
+                <% if cart_item.product.photos[0].present? %>
+                  <%= image_tag(cart_item.product.photos[0].avatar.thumb.url, class: "thumbnail4") %>
+
                 <% else %>
                   <%= image_tag("http://placehold.it/100x100&text=No Pic", class: "thumbnail4") %>
                 <% end %>

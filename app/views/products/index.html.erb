@@ -44,8 +44,11 @@
     <div class="col-md-4">
 
       <%= link_to product_path(product) do %>
-        <% if product.image.present? %>
-          <%= image_tag(product.image.url, class: "thumbnail1") %>
+
+
+        <% if product.photos.present? %>
+          <%= image_tag(product.photos[0].avatar.thumb.url, class: "thumbnail1") %>
+
         <% else %>
           <%= image_tag("http://placehold.it/500x500&text=No Pic", class: "thumbnail1") %>
         <% end %>

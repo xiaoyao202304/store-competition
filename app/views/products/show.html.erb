@@ -1,12 +1,33 @@
+
 <div class="row">
-  <div class="col-md-6">
-    <% if @product.image.present? %>
-      <%= image_tag(@product.image.url, class: "thumbnail2") %>
+  
+<div class="product-show">
+
+
+  <!-- 商品图片 -->
+  <div class="col-md-8">
+
+    <% if @photos.present? %>
+      <!-- 显示商品第一张图片 -->
+      <div class='big-photo' style="margin-bottom: 5px;padding: 15px;">
+        <%= image_tag(@photos.first.avatar.medium.url) %>
+      </div>
+      <!-- 显示商品所有图片 小图 -->
+      <% @photos.each_with_index do |p| %>
+        <div class="list-photo" style="float: left; width: 230px; height: 230px;">
+          <%= image_tag p.avatar.thumb.url, class: "thumbnail" %>
+        </div>
+      <% end %>
+
+
     <% else %>
       <%= image_tag("http://placehold.it/400x400&text=No Pic", class: "thumbnail2") %>
     <% end %>
+
   </div>
-  <div class="col-md-6">
+
+  <!-- 商品信息 -->
+  <div class="col-md-4">
     <h2><%= @product.title %></h2>
     <div style="height:100px;">
       <p><%= @product.description %></p>
@@ -25,5 +46,6 @@
       <% end %>
     </div>
   </div>
+
 
 </div>
