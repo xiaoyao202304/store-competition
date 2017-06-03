@@ -68,7 +68,7 @@
  //----------navbar主页logo居中
 .navbar-brand {
   font-size: 30px;
-  font-family:Arial Hebrew Scholor;
+  font-family:Graphik Hebrew Scholor;
 }
  .navbar-brand-centered {
          position: absolute;
@@ -117,7 +117,7 @@
    background-color: #212121;
         border: none;
         color: white;
-        font-family:Arial;
+        font-family:Graphik;
         padding: 10px 24px;
         text-align: center;
         text-decoration: none;
@@ -162,49 +162,57 @@
    box-shadow: 0px 1px #808284;
  }
 
- .thumbnail1 {
-     display: block;
+//--------------产品图片展示设置
+.thumbnail1 {
+   display: block;
 
-     margin: 60px 70px 60px 70px;
+   margin: 20px 20px 20px 20px;
 
-     line-height: 1.42857143;
-     background-color: #fff;
-     height: 300px;
-   }
-   .thumbnail2 {
-     display: block;
+   line-height: 1.42857143;
+   background-color: #fff;
+   height: 300px;
+ }
+ .thumbnail2 {
+  display: block;
 
-     margin: 60px 70px 60px 150px;
+  margin: 60px 70px 60px 150px;
 
-     line-height: 1.42857143;
-     background-color: #fff;
-     height: 300px;
-     }
+  line-height: 1.42857143;
+  background-color: #fff;
+  height: 300px;
+  }
+ .thumbnail3 {
+  display: block;
 
+  margin: 10px 10px 10px 10px;
+
+  line-height: 1.42857143;
+  background-color: #fff;
+  height: 300px;
+  }
 //-----------产品主页面调整
 .product-details {
-    margin-right: 80px;
-    margin-left: 80px;
-    padding-left: 19px;
-    padding-right: 19px;
+
+    margin-left: 20px;
+
 }
 
 .product__name{
-  font-family: Arial;
-  font-weight: 5;
-  line-height: 1.1;
+  font-family: Graphik;
+  font-size: 16px;
+
   color: #808284;
 }
 
 .product__price{
-  font-family: Arial;
+  font-family: Graphik;
   font-weight: 50;
   line-height: 0;
   color: #808284;
 }
 
 .product__color{
-  font-family: Arial;
+  font-family: Graphik;
   font-weight: 50;
   line-height: 0;
   color: #E0E0E0;
@@ -220,7 +228,7 @@ line-height: 1;
  .content-section-a {
      padding: 20px ;
      background-color: #f8f8f8;
-     font-family: Arial;
+     font-family: Graphik;
      font-weight: 50;
      line-height: 0;
      color: #808284;
@@ -230,17 +238,24 @@ line-height: 1;
      padding: 50px 0;
      border-top: 1px solid #e7e7e7;
      border-bottom: 1px solid #e7e7e7;
-     font-family: Arial;
+     font-family: Graphik;
      font-weight: 50;
      line-height: 0;
      color: #808284;
  }
 
-
-
- .section-heading {
-     margin-bottom: -10px;
+ .section-heading1 {
+     margin: 50px 10px 10px 10px;
  }
+
+ .section-heading2 {
+     margin: 10px 10px 50px -150px;
+ }
+.section-text{
+  font-size: 13px;
+  line-height: 20px;
+  margin: 30px 50px 30px 10px
+}
 
  .img-responsive {
     display: block;

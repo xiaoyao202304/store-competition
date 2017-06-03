@@ -36,7 +36,7 @@
             <td class="col-md-3">
               <%= link_to product_path(cart_item.product) do %>
                 <% if cart_item.product.image.present? %>
-                  <%= image_tag(cart_item.product.image.thumb.url, class: "thumbnail2") %>
+                  <%= image_tag(cart_item.product.image.url, class: "thumbnail2") %>
                 <% else %>
                   <%= image_tag("http://placehold.it/100x100&text=No Pic", class: "thumbnail2") %>
                 <% end %>
