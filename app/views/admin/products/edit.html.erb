@@ -1,35 +1,46 @@
-<h2>Edit Product</h2>
+
+<div class="container">
+	<div class="row">
+	<div class="col-md-9">
+
+<h3 class="heading">Edit Product<span></h3>
 
 <%= simple_form_for [:admin, @product] do |f| %>
-  <div class="group">
+  <div class="group col-md-4">
     <%= f.input :title %>
   </div>
 
-  <div class="group">
-    <%= f.input :description %>
-  </div>
 
-  <div class="group">
+
+  <div class="group col-md-4">
     <%= f.input :quantity %>
   </div>
 
-  <div class="group">
+  <div class="group col-md-4">
     <%= f.input :price %>
   </div>
 
+	<div class="group col-md-12">
+		<%= f.input :description %>
+	</div>
+
+<div class="group col-md-12">
   <% if @product.image.present? %>
     <span>当前商品图</span><br>
     <%= image_tag(@product.image.thumb.url) %>
   <% end %>
+</div>
 
+<div class="group col-md-12">
   <div class="group">
     <%= f.input :image, as: :file %>
   </div>
-
+</div>
+<div class="group col-md-12">
   <div class="group">
     <%= f.input :category, :as => :radio_buttons, :collection => Product::CATEGORY, :item_wrapper_class => 'inline' %>
   </div>
+</div>
+<%= f.submit "Submit", data: { disable_with: "Submitting..." }, class:"btn btn-checkout" %>
 
-
-  <%= f.submit "Submit", data: { disable_with: "Submitting..." } %>
 <% end %>
