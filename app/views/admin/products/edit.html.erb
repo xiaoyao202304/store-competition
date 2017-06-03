@@ -17,13 +17,20 @@
     <%= f.input :price %>
   </div>
 
-  <% if @product.image.present? %>
-    <span>当前商品图</span><br>
-    <%= image_tag(@product.image.thumb.url) %>
-  <% end %>
-
+  <!-- 显示商品当前图片 -->
   <div class="group">
-    <%= f.input :image, as: :file %>
+    <% if @product.photos.present? %>
+      <span>当前商品图</span><br>
+      <% @product.photos.each do |p| %>
+        <%= image_tag p.avatar.thumb.url %>
+      <% end %>
+    <% end %>
+  </div>
+
+  <!-- 上传商品图片 -->
+  <div class="group">
+    <%= f.label '上传商品图片(可传多张)' %><br>
+    <%= f.file_field :avatar, :multiple => true, name: "photos[avatar][]" %>
   </div>
 
   <div class="group">
