@@ -1,7 +1,3 @@
-<br><br>
-
-
-
 
 <div class="content-section-a">
    <div class="container">
@@ -10,11 +6,19 @@
 
          <div class="clearfix"></div>
          <br><br><br><br>
-         <h2 class="section-heading">Women's Like</h2>
-         <hr class="section-heading-spacer">
+         <h2 class="section-heading1 text-left">Amaze Soho Studio</h2>
+         <h4 class="section-text">
+           Come shop our new showroom in our New York studio.<br><br>
+           We’ll have our latest collections, plus stylists on hand to help you find your perfect look and fit.
+           <br><br>
+           You’ll be able to try on and purchase on-site with complimentary two-day shipping. <br><br>
+            You’re also welcome to come in and return or exchange items from any online orders you have,
+            as we’ll process it right away for you.
+         </h4>
+
 
        </div>
-       <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+       <div class="col-lg-5  col-sm-6">
          <%= image_tag 'pic-1.jpg', class: 'img-responsive' %>
        </div>
      </div>
@@ -28,8 +32,8 @@
 
          <div class="clearfix"></div>
 
-         <h2 class="section-heading">Best Sellers</h2>
-         <hr class="section-heading-spacer">
+         <h2 class="section-heading2">Product</h2>
+
        </div>
 
      </div>
@@ -37,24 +41,25 @@
 
 
     <% @products.each do |product| %>
-    <div class="col-xs-1 col-md-4">
+    <div class="col-md-4">
 
       <%= link_to product_path(product) do %>
+
+
         <% if product.photos.present? %>
           <%= image_tag(product.photos[0].avatar.thumb.url, class: "thumbnail1") %>
+
         <% else %>
           <%= image_tag("http://placehold.it/500x500&text=No Pic", class: "thumbnail1") %>
         <% end %>
       <% end %>
 
       <div class="product-details">
-
           <a href="#" class="clearfix product__link">
               <h4 class="product__name">
                 <%= product.title %>
               </h4>
           </a>
-
             <span class="product__price">
               $<%= product.price %>
             </span>
@@ -72,4 +77,4 @@
   <% end %>
 </div>
 </div>
-</div>
+<!--  -->

@@ -1,21 +1,42 @@
-<h2>订单列表 </h2>
 
-<table class="table table-bordered">
-  <thead>
-    <tr>
-      <th>#</th>
-      <th>生成时间</th>
+<div class="container">
+    <h2>My Order</h2>
 
-    </tr>
-  </thead>
-  <tbody>
+    <div class="row">
+        <div class="col-xs-12" style="">
+            <div class="panel panel-default list-group-panel">
+                <div class="panel-body">
+                    <ul class="list-group list-group-header">
+                        <li class="list-group-item list-group-body">
+                            <div class="row">
+                                <div class="col-xs-6 text-left">List No.</div>
+                                <div class="col-xs-3">Generate time</div>
+                                <div class="col-xs-3">支付状态</div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="list-group list-group-body" style="">
+                        <li class="list-group-item">
+                            <div class="row">
+                                <% @orders.each do |order| %>
+                                <div class="col-xs-6 text-left" style=" ">
+                                  <a>
+                                    <span class="glyphicon glyphicon-file" aria-hidden="true">
+                                    </span> <%= link_to(order.id, order_path(order.token)) %> </a>
+                                  </div>
+                                <div class="col-xs-3" style=""><%= order.created_at.to_s(:long) %></div>
+                                <div class="col-xs-3" style="">
 
-    <% @orders.each do |order| %>
-    <tr>
-      <td> <%= link_to(order.id, order_path(order.token)) %> </td>
-      <td> <%= order.created_at.to_s(:long) %> </td>
-    </tr>
-    <% end %>
+                                    <span class="fa fa-paper-plane" >
+                                    </span><%= order.aasm_state %>
 
-  </tbody>
-</table>
+                                </div>
+                                <% end %>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

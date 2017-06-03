@@ -1,64 +1,130 @@
+  <br><br><br><br>
 
 
+<div class="container">
 <div class="row">
-  <div class="col-md-12">
-    <%= link_to("清空购物车", clean_carts_path, method: :delete, class: "pull-right",
-                style: "text-decoration: underline;", data: {confirm: "你确定要清空整个购物车吗？"} ) %>
+    <!--Current Cart-->
+    <div class="col-md-9">
+      <div class="col-md-12">
+        <%= link_to("Remove all", clean_carts_path, method: :delete, class: "pull-right",
+        style: "text-decoration: underline;", data: {confirm: "Are you sure Remove all ？"} ) %>
+      </div>
+      <%= link_to("←Back to Shopping", products_path) %>
+      <div class="panel panel-default1">
 
-    <h2>购物车</h2>
+          <div class="panel-heading text-center">
+            <h4>Current Cart</h4>
+          </div>
+          <div class="panel-body">
+             <table class="table borderless">
+               <thead>
+                  <tr>
+                    <td><strong>Your Love</strong></td>
+                    <td>Product</td>
+                    <td>Price</td>
+                    <td>Quantity</td>
+                    <td>Total</td>
 
+                  </tr>
+                </thead>
 
-    <table class="table table-bordered">
-      <thead>
-        <tr>
-          <th colspan="2">商品资讯</th>
-          <th>单价</th>
-          <th>数量</th>
-          <th>操作选项</th>
-        </tr>
-      </thead>
-      <tbody>
-        <% current_cart.cart_items.each do |cart_item| %>
+          <tbody>
+            <% current_cart.cart_items.each do |cart_item| %>
+          <!-- foreach ($order->lineItems as $line) or some such thing here -->
           <tr>
-            <td>
+            <!--产品图片区域-->
+            <td class="col-md-3">
               <%= link_to product_path(cart_item.product) do %>
+
+               
+
                 <% if cart_item.product.photos[0].present? %>
-                  <%= image_tag(cart_item.product.photos[0].avatar.thumb.url, class: "thumbnail") %>
+                  <%= image_tag(cart_item.product.photos[0].avatar.thumb.url, class: "thumbnail4") %>
+
                 <% else %>
-                  <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
+                  <%= image_tag("http://placehold.it/100x100&text=No Pic", class: "thumbnail4") %>
                 <% end %>
               <% end %>
-            </td>
-            <td><%= link_to(cart_item.product.title, product_path(cart_item.product)) %></td>
-            <td><%= cart_item.product.price %></td>
-            <td>
-              <%= form_for cart_item, url: cart_item_path(cart_item.product_id) do |f| %>
-                <%= f.select :quantity, 1..cart_item.product.quantity %>
-                <%= f.submit "更新", data: {disable_with: "Submiting..."} %>
-              <% end %>
-            </td>
-            <td>
-              <%= link_to cart_item_path(cart_item.product_id), method: :delete do %>
-                <i class="fa fa-trash"></i>
-              <% end %>
-            </td>
-          </tr>
-        <% end %>
-      </tbody>
-    </table>
+                  </td>
 
-    <br>
+                  <td><%= link_to(cart_item.product.title, product_path(cart_item.product)) %></td>
+                  <!--产品价格区域-->
+                    <td >$<%= cart_item.product.price %></td>
+                    <!--产品数量区域-->
+                    <td ><%= form_for cart_item, url: cart_item_path(cart_item.product_id) do |f| %>
+                      <%= f.select :quantity, 1..cart_item.product.quantity %>
+                      <%= f.submit "Update", data: {disable_with: "Submiting..."}, class:"btn btn-update" %>
+                    <% end %></td>
+                    <!--产品总价区域-->
+                    <td >
+                      <div class="total clearfix">
+                      <span >
+                        <span>$<%= render_cart_total_price(current_cart) %> </span>
+                      </span>
+                    </div>
+                  </td>
 
-    <div class="total clearfix">
-      <span class="pull-right">
-        <span>总计 <%= render_cart_total_price(current_cart) %> RMB</span>
-      </span>
+                    <td class="text-right">
+                      <%= link_to cart_item_path(cart_item.product_id), method: :delete do %>
+                        ×
+                      <% end %>
+                    </td>
+            </tr>
+
+
+
+
+
+
+            <% end %>
+          </tbody>
+          </table>
+          </div>
+      </div>
     </div>
 
-    <hr>
 
-    <div class="checkout clearfix">
-      <%= link_to("确认结账", checkout_carts_path, method: :post, class: "btn btn-lg btn-zdy pull-right") %>
+<!--购物车review order页面-->
+<div class="container">
+<div class="row">
+ <br>
+  <div class="col-md-3">
+
+          <!--REVIEW ORDER-->
+          <div class="panel panel-default panel-default">
+              <div class="panel-heading text-center">
+                  <h4>Order Summary</h4>
+              </div>
+              <div class="panel-body1">
+                      <div class="col-md-12">
+                          <strong>Subtotal </strong>
+                          <div class="pull-right"><span>$</span>
+                            <span><%= render_cart_total_price(current_cart) %></span>
+                          </div>
+                      </div>
+
+                      <div class="col-md-12">
+                          <small>Shipping</small>
+                          <div class="pull-right"><span>0</span></div>
+                          <hr>
+                      </div>
+                      <div class="col-md-12">
+                          <strong>Total</strong>
+                          <div class="pull-right"><span>$</span>
+                            <span><%= render_cart_total_price(current_cart) %></span>
+                          </div>
+                          <hr>
+                      </div>
+                      <div class="checkout clearfix">
+                        <%= link_to("Checkout", checkout_carts_path, method: :post, class: "btn btn-lg btn-checkout pull-right") %>
+                      </div>
+
+              </div>
+
+          </div>
+          <!--REVIEW ORDER END-->
+      </div>
+      <div class="col-md-8 col-sm-6 col-xs-12 col-md-pull-6 col-sm-pull-6">
+      </div>
     </div>
-  </div>
 </div>

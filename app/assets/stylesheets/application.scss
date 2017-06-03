@@ -23,7 +23,7 @@
 
    .navbar-default {
      background: transparent;
-
+     font-family:Courier New;
      margin-bottom: 0px;
      border-radius: 0;
      height: 60px;
@@ -68,7 +68,7 @@
  //----------navbar主页logo居中
 .navbar-brand {
   font-size: 30px;
-  font-family:Arial Hebrew Scholor;
+  font-family:Courier New;
 }
  .navbar-brand-centered {
          position: absolute;
@@ -105,6 +105,7 @@
 
  footer {
      color: #808284;
+     font-family:Courier New;
  }
 
  footer .footer-below {
@@ -114,10 +115,10 @@
 
  //---------自定义按钮
  .btn-zdy{
-   background-color: #212121;
+   background-color: #302e30;
         border: none;
         color: white;
-        font-family:Arial;
+        font-family:Courier New;
         padding: 10px 24px;
         text-align: center;
         text-decoration: none;
@@ -127,11 +128,43 @@
         cursor: pointer;
         border-radius: 0
  }
- .btn-zdy:hover {
+ .btn:hover {
    background: #84898c;
 
   text-decoration: none;
  }
+ .btn-checkout{
+   background-color: #bbbbbd;
+        border: none;
+        color: white;
+        font-family:Courier New;
+        padding: 10px 24px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 0
+ }
+ .btn-checkout:hover {
+   background: #84898c;
+
+  text-decoration: none;
+ }
+ .btn-update {
+  font-family: Courier New;
+  color: #302e30;
+  font-size: 7px;
+  background: #bbbbbd;
+  padding: 1px 5px 1px 5px;
+  text-decoration: none;
+}
+
+.btn-update:hover {
+  background: #b7bbbd;
+  text-decoration: none;
+}
  //------------注册页面美化
  .form-group1 {
    margin: auto;
@@ -162,40 +195,65 @@
    box-shadow: 0px 1px #808284;
  }
 
- .thumbnail1 {
-     display: block;
+//--------------产品图片展示设置
+.thumbnail1 {
+   display: block;
 
-     margin: 60px 70px 60px 70px;
+   margin: 20px 20px 20px 20px;
 
-     line-height: 1.42857143;
-     background-color: #fff;
-     height: 300px;
+   line-height: 1.42857143;
+   background-color: #fff;
+   height: 300px;
+ }
+ .thumbnail2 {
+  display: block;
+
+  margin: 60px 70px 60px 150px;
+
+  line-height: 1.42857143;
+  background-color: #fff;
+  height: 300px;
+  }
+ .thumbnail3 {
+  display: block;
+
+  margin: 1px 1px 1px 1px;
+
+  line-height: 1.42857143;
+  background-color: #fff;
+  height: 50px;
+  }
+  .thumbnail4 {
+   display: block;
+
+   margin: 1px 1px 1px 1px;
+   line-height: 1.42857143;
+   background-color: #fff;
+   height: 100px;
    }
-
 //-----------产品主页面调整
 .product-details {
-    margin-right: 80px;
-    margin-left: 80px;
-    padding-left: 19px;
-    padding-right: 19px;
+
+    margin-left: 20px;
+
 }
 
 .product__name{
-  font-family: Arial;
-  font-weight: 5;
-  line-height: 1.1;
+  font-family: Courier New;
+  font-size: 16px;
+
   color: #808284;
 }
 
 .product__price{
-  font-family: Arial;
+  font-family: Courier New;
   font-weight: 50;
   line-height: 0;
   color: #808284;
 }
 
 .product__color{
-  font-family: Arial;
+  font-family: Courier New;
   font-weight: 50;
   line-height: 0;
   color: #E0E0E0;
@@ -209,22 +267,147 @@ line-height: 1;
 //---------产品页面Content布局---------
 
  .content-section-a {
-     padding: 50px 0;
+     padding: 20px ;
      background-color: #f8f8f8;
+     font-family: Courier New;
+     font-weight: 50;
+     line-height: 0;
+     color: #808284;
  }
 
  .content-section-b {
      padding: 50px 0;
      border-top: 1px solid #e7e7e7;
      border-bottom: 1px solid #e7e7e7;
+     font-family: Courier New;
+     font-weight: 50;
+     line-height: 0;
+     color: #808284;
  }
 
- .section-heading-spacer {
-     float: left;
-     width: 200px;
-     border-top: 3px solid #e7e7e7;
+ .section-heading1 {
+     margin: 50px 10px 10px 10px;
  }
 
- .section-heading {
-     margin-bottom: 3px;
+ .section-heading2 {
+     margin: 10px 10px 50px -150px;
  }
+.section-text{
+  font-size: 13px;
+  line-height: 20px;
+  margin: 30px 50px 30px 10px
+}
+
+ .img-responsive {
+    display: block;
+    max-width: 150%;
+    height: 400px;
+
+}
+//-------购物车页面修改
+.panel-default1 {
+  border-bottom: 0px solid #dfe0e1;
+font-family: Courier New;
+}
+
+.panel-default1 > .panel-heading {
+    color: #333333;
+    background-color: #fff;
+    border-color: #fff;
+}
+.panel-body1{
+  display: block;
+  line-height: 1.42857143;
+  background-color: #fff;
+
+}
+
+//-------------订单列表页面修改
+.list-group-item{
+    border: 0;
+    padding-left: 0;
+    border-top: 1px solid;
+    border-color: rgba(37,40,43,0.1);
+
+}
+.list-group .list-group-item:first-child{
+    border:0;
+}
+.list-group .list-group-item a{
+    color: #808284;
+    cursor: pointer;
+    text-decoration: none;
+}
+.list-group.list-group-header{
+    padding:0;
+    margin:0;
+}
+.list-group-panel{
+    border: 1px solid #dfe0e1;
+    border-radius: 0;
+}
+
+//-------字体框架表格美化
+.product{
+    position: relative;
+    perspective: 800px;
+    width:306px;
+    height:471px;
+    transform-style: preserve-3d;
+    transition: transform 5s;
+	float:left;
+	margin-right: 23px;
+	-webkit-transition: width 500ms ease-in-out;
+	   -moz-transition: width 500ms ease-in-out;
+		-ms-transition: width 500ms ease-in-out;
+		 -o-transition: width 500ms ease-in-out;
+ 		    transition: width 500ms ease-in-out;
+}
+.panel{
+  font-family: Courier New;
+}
+.panel-default {
+  border-bottom: 0px solid #dfe0e1;
+font-family: Courier New;
+}
+
+.panel-default > .panel-heading {
+    color: #333333;
+    background-color: #fff;
+    border-color: #fff;
+}
+.panel-body{
+  display: block;
+  line-height: 1.42857143;
+  background-color: #fff;
+
+}
+.order-form{
+  font-family: Courier New;
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-family: Courier New;
+}
+//------------管理员页面新增、编辑、订单修改
+.table, .container{
+  font-family: Courier New;
+}
+
+.heading {
+    border-bottom: 1px solid #dfe0e1;
+    padding-bottom: 9px;
+    position: relative;
+}
+.heading span {
+    background: #333333 none repeat scroll 0 0;
+    bottom: -2px;
+    height: 3px;
+    left: 0;
+    position: absolute;
+    width: 75px;
+}
+.form-control,{
+  border-radius: 0px;
+
+}
