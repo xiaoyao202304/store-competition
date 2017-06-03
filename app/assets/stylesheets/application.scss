@@ -23,7 +23,7 @@
 
    .navbar-default {
      background: transparent;
-
+     font-family:Courier New;
      margin-bottom: 0px;
      border-radius: 0;
      height: 60px;
@@ -68,7 +68,7 @@
  //----------navbar主页logo居中
 .navbar-brand {
   font-size: 30px;
-  font-family:Graphik Hebrew Scholor;
+  font-family:Courier New;
 }
  .navbar-brand-centered {
          position: absolute;
@@ -105,6 +105,7 @@
 
  footer {
      color: #808284;
+     font-family:Courier New;
  }
 
  footer .footer-below {
@@ -114,10 +115,10 @@
 
  //---------自定义按钮
  .btn-zdy{
-   background-color: #212121;
+   background-color: #302e30;
         border: none;
         color: white;
-        font-family:Graphik;
+        font-family:Courier New;
         padding: 10px 24px;
         text-align: center;
         text-decoration: none;
@@ -127,11 +128,43 @@
         cursor: pointer;
         border-radius: 0
  }
- .btn-zdy:hover {
+ .btn:hover {
    background: #84898c;
 
   text-decoration: none;
  }
+ .btn-checkout{
+   background-color: #bbbbbd;
+        border: none;
+        color: white;
+        font-family:Courier New;
+        padding: 10px 24px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 0
+ }
+ .btn-checkout:hover {
+   background: #84898c;
+
+  text-decoration: none;
+ }
+ .btn-update {
+  font-family: Courier New;
+  color: #302e30;
+  font-size: 7px;
+  background: #bbbbbd;
+  padding: 1px 5px 1px 5px;
+  text-decoration: none;
+}
+
+.btn-update:hover {
+  background: #b7bbbd;
+  text-decoration: none;
+}
  //------------注册页面美化
  .form-group1 {
    margin: auto;
@@ -190,6 +223,14 @@
   background-color: #fff;
   height: 300px;
   }
+  .thumbnail4 {
+   display: block;
+
+   margin: 1px 1px 1px 1px;
+   line-height: 1.42857143;
+   background-color: #fff;
+   height: 100px;
+   }
 //-----------产品主页面调整
 .product-details {
 
@@ -198,21 +239,21 @@
 }
 
 .product__name{
-  font-family: Graphik;
+  font-family: Courier New;
   font-size: 16px;
 
   color: #808284;
 }
 
 .product__price{
-  font-family: Graphik;
+  font-family: Courier New;
   font-weight: 50;
   line-height: 0;
   color: #808284;
 }
 
 .product__color{
-  font-family: Graphik;
+  font-family: Courier New;
   font-weight: 50;
   line-height: 0;
   color: #E0E0E0;
@@ -228,7 +269,7 @@ line-height: 1;
  .content-section-a {
      padding: 20px ;
      background-color: #f8f8f8;
-     font-family: Graphik;
+     font-family: Courier New;
      font-weight: 50;
      line-height: 0;
      color: #808284;
@@ -238,7 +279,7 @@ line-height: 1;
      padding: 50px 0;
      border-top: 1px solid #e7e7e7;
      border-bottom: 1px solid #e7e7e7;
-     font-family: Graphik;
+     font-family: Courier New;
      font-weight: 50;
      line-height: 0;
      color: #808284;
@@ -265,29 +306,29 @@ line-height: 1;
 }
 //-------购物车页面修改
 .panel-default1 {
-  border-bottom: 0px solid #dfe0e1；
-
+  border-bottom: 0px solid #dfe0e1;
+font-family: Courier New;
 }
 
-.panel-default > .panel-heading {
+.panel-default1 > .panel-heading {
     color: #333333;
-    background-color: #f5f5f5;
-    border-color: #dfe0e1;
+    background-color: #fff;
+    border-color: #fff;
 }
 .panel-body1{
   display: block;
   line-height: 1.42857143;
   background-color: #fff;
 
-
-
 }
+
 //-------------订单列表页面修改
 .list-group-item{
     border: 0;
     padding-left: 0;
     border-top: 1px solid;
     border-color: rgba(37,40,43,0.1);
+
 }
 .list-group .list-group-item:first-child{
     border:0;
@@ -321,4 +362,21 @@ line-height: 1;
 		-ms-transition: width 500ms ease-in-out;
 		 -o-transition: width 500ms ease-in-out;
  		    transition: width 500ms ease-in-out;
+}
+
+.panel-default {
+  border-bottom: 0px solid #dfe0e1;
+font-family: Courier New;
+}
+
+.panel-default > .panel-heading {
+    color: #333333;
+    background-color: #fff;
+    border-color: #fff;
+}
+.panel-body{
+  display: block;
+  line-height: 1.42857143;
+  background-color: #fff;
+
 }

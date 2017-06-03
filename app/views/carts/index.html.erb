@@ -36,9 +36,9 @@
             <td class="col-md-3">
               <%= link_to product_path(cart_item.product) do %>
                 <% if cart_item.product.image.present? %>
-                  <%= image_tag(cart_item.product.image.url, class: "thumbnail2") %>
+                  <%= image_tag(cart_item.product.image.url, class: "thumbnail4") %>
                 <% else %>
-                  <%= image_tag("http://placehold.it/100x100&text=No Pic", class: "thumbnail2") %>
+                  <%= image_tag("http://placehold.it/100x100&text=No Pic", class: "thumbnail4") %>
                 <% end %>
               <% end %>
                   </td>
@@ -49,7 +49,7 @@
                     <!--产品数量区域-->
                     <td ><%= form_for cart_item, url: cart_item_path(cart_item.product_id) do |f| %>
                       <%= f.select :quantity, 1..cart_item.product.quantity %>
-                      <%= f.submit "Update", data: {disable_with: "Submiting..."} %>
+                      <%= f.submit "Update", data: {disable_with: "Submiting..."}, class:"btn btn-update" %>
                     <% end %></td>
                     <!--产品总价区域-->
                     <td >
@@ -113,7 +113,7 @@
                           <hr>
                       </div>
                       <div class="checkout clearfix">
-                        <%= link_to("Checkout", checkout_carts_path, method: :post, class: "btn btn-lg btn-zdy pull-right") %>
+                        <%= link_to("Checkout", checkout_carts_path, method: :post, class: "btn btn-lg btn-checkout pull-right") %>
                       </div>
 
               </div>

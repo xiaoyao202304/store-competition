@@ -34,14 +34,14 @@
 
     <div class="pull-left">
       <% if @order.order_placed? || @order.paid? %>
-        <%= link_to("Cancel Order", apply_to_cancel_order_path(@order), method: :post, class: "btn  btn-zdy") %>
+        <%= link_to("Cancel Order", apply_to_cancel_order_path(@order), method: :post, class: "btn  btn-checkout") %>
       <% end %>
     </div>
 
     <% if !@order.is_paid? %>
       <div class="group pull-right">
-        <%= link_to("Alipay", pay_with_alipay_order_path(@order.token), :method => :post, :class => "btn btn-zdy") %>
-        <%= link_to("Wechatpay", pay_with_wechat_order_path(@order.token), :method => :post, :class => "btn btn-zdy") %>
+        <%= link_to("Alipay", pay_with_alipay_order_path(@order.token), :method => :post, :class => "btn btn-checkout") %>
+        <%= link_to("Wechatpay", pay_with_wechat_order_path(@order.token), :method => :post, :class => "btn btn-checkout") %>
       </div>
     <% else %>
       <p class="text-center">This order has been paid</p>
