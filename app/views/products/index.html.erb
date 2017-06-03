@@ -11,10 +11,10 @@
          <div class="clearfix"></div>
          <br><br><br><br>
          <h2 class="section-heading">Women's Like</h2>
-         <hr class="section-heading-spacer">
+
 
        </div>
-       <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+       <div class="col-lg-5  col-sm-6">
          <%= image_tag 'pic-1.jpg', class: 'img-responsive' %>
        </div>
      </div>
@@ -28,8 +28,8 @@
 
          <div class="clearfix"></div>
 
-         <h2 class="section-heading">Best Sellers</h2>
-         <hr class="section-heading-spacer">
+         <h2 class="section-heading">Product</h2>
+
        </div>
 
      </div>
@@ -41,7 +41,7 @@
 
       <%= link_to product_path(product) do %>
         <% if product.image.present? %>
-          <%= image_tag(product.image.thumb.url, class: "thumbnail1") %>
+          <%= image_tag(product.image.url, class: "thumbnail1") %>
         <% else %>
           <%= image_tag("http://placehold.it/500x500&text=No Pic", class: "thumbnail1") %>
         <% end %>
@@ -72,4 +72,4 @@
   <% end %>
 </div>
 </div>
-</div>
+<!--  -->
