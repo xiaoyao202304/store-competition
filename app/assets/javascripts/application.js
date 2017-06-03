@@ -18,3 +18,13 @@
 //= require bootstrap/collapse
 //= require bootstrap/dropdown
 //= require_tree .
+
+
+ // Products#show 切换显示图片
+
+$(document).on('mouseover', '.list-photo', function () {
+  var src_thumb = $(this).find('img').attr('src') //抓取小圖圖片路徑
+  var src_medium = src_thumb.toString().replace("thumb", "medium") //更改圖片路徑
+
+  $('.big-photo').find('img').attr('src', src_medium) //變更大圖圖片路徑
+})
