@@ -10,18 +10,19 @@
     <% if @photos.present? %>
       <!-- 显示商品第一张图片 -->
       <div class='big-photo' style="margin-bottom: 1px;padding: 20px;">
-        <%= image_tag(@photos.first.avatar.medium.url) %>
+        <%= image_tag(@photos.first.avatar.url) %>
       </div>
+
       <!-- 显示商品所有图片 小图 -->
       <% @photos.each_with_index do |p| %>
-        <div class="list-photo" style="float: left ; width: 230px; height: 230px;">
+        <div class="list-photo" style="float: left ;  height: 230px;">
           <%= image_tag p.avatar.url, class: "thumbnail5" %>
         </div>
       <% end %>
 
 
     <% else %>
-      <%= image_tag("http://placehold.it/400x400&text=No Pic", class: "thumbnail5") %>
+      <%= image_tag("http://placehold.it/400x400&text=No Pic", class: "thumbnail2") %>
     <% end %>
 
   </div>
