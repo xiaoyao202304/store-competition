@@ -28,3 +28,5 @@ $(document).on('mouseover', '.list-photo', function () {
 
   $('.big-photo').find('img').attr('src', src_medium) //變更大圖圖片路徑
 })
+
+//--------

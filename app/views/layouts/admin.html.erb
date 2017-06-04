@@ -6,6 +6,7 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
+
 <body>
   <div class="container">
     <%= render "common/navbar" %>
@@ -13,7 +14,7 @@
       <div class="col-md-2">
         <ul class="nav nav-pills nav-stacked" style="max-width: 100px;">
           <li> <%= link_to("Products", admin_products_path) %> </li>
-          <li> <%= link_to("Orders", admin_orders_path, :method => "delete", :data => { :confirm => "Are you sure?" }) %> </li>
+          <li> <%= link_to("Orders", admin_orders_path) %> </li>
         </ul>
       </div>
       <div class="col-md-10">
@@ -22,4 +23,6 @@
     </div>
   </div>
 </body>
+
+
 </html>
