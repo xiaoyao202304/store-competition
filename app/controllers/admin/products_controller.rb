@@ -42,7 +42,7 @@ class Admin::ProductsController < ApplicationController
         redirect_to admin_products_path
 
     elsif @product.update(product_params)
-      redirect_to admin_products_path 
+      redirect_to admin_products_path
     else
       render :edit
     end
@@ -52,7 +52,7 @@ class Admin::ProductsController < ApplicationController
      @product = Product.find(params[:id])
      @product.destroy
 
-     redirect_to admin_products_path 
+     redirect_to admin_products_path(@product) 
    end
 
 
