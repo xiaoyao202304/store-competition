@@ -1,11 +1,11 @@
 
 <div class="row">
 
-<div class="product-show">
+
 
 
   <!-- 商品图片 -->
-  <div class="col-md-8">
+  <div class="col-md-6">
 
     <% if @photos.present? %>
       <!-- 显示商品第一张图片 -->
@@ -28,7 +28,7 @@
   </div>
 
   <!-- 商品信息 -->
-  <div class="col-md-4">
+  <div class="productshow col-md-6 ">
     <h2><%= @product.title %></h2>
     <h5>DESCRIPTION:</h5>
     <div style="height:100px;">
@@ -46,7 +46,7 @@
       <% if @product.quantity.present? && @product.quantity > 0 %>
         <%= link_to("+Add", add_to_cart_product_path(@product), :method => :post, :class => "btn  btn-lg btn-checkout") %>
       <% else %>
-        Sorry, Sold out now 
+        Sorry, Sold out now
       <% end %>
     </div>
   </div>
