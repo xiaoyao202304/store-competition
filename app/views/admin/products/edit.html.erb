@@ -26,7 +26,7 @@
 	</div>
 
 <div class="group col-md-12">
- 
+
   <!-- 显示商品当前图片 -->
   <div class="group">
     <% if @product.photos.present? %>
@@ -52,3 +52,9 @@
 <%= f.submit "Submit", data: { disable_with: "Submitting..." }, class:"btn btn-checkout" %>
 
 <% end %>
+
+<!--描述框autosize-->
+<script type="text/javascript">
+autosize($('#product_description'));
+
+</script>

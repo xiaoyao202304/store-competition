@@ -165,6 +165,26 @@
   background: #b7bbbd;
   text-decoration: none;
 }
+
+.btn-add{
+  background-color: #b7bbbd;
+       border: none;
+       color: white;
+       font-family:Courier New;
+       padding: 2px 4px;
+       text-align: center;
+       text-decoration: none;
+       display: inline-block;
+       font-size: 16px;
+       margin: 4px 2px;
+       cursor: pointer;
+       border-radius: 0
+}
+.btn-add:hover {
+  background: #84898c;
+
+ text-decoration: none;
+}
  //------------注册页面美化
  .form-group1 {
    margin: auto;
@@ -209,42 +229,44 @@
    background-color: #fff;
    height: 300px;
  }
- .thumbnail2 {
+.thumbnail2 {
+display: block;
+
+margin: 60px 70px 60px 150px;
+
+line-height: 1.42857143;
+background-color: #fff;
+height: 300px;
+}
+.thumbnail3 {
+display: block;
+
+margin: 1px 1px 1px 1px;
+
+line-height: 1.42857143;
+background-color: #fff;
+height: 50px;
+}
+.thumbnail4 {
+display: block;
+
+margin: 1px 1px 1px 1px;
+line-height: 1.42857143;
+background-color: #fff;
+height: 100px;
+}
+
+.thumbnail5 {
   display: block;
 
-  margin: 60px 70px 60px 150px;
+  margin: 2px 0px 2px 20px;
 
   line-height: 1.42857143;
   background-color: #fff;
-  height: 300px;
-  }
- .thumbnail3 {
-  display: block;
+  height: 150px;
+}
 
-  margin: 1px 1px 1px 1px;
 
-  line-height: 1.42857143;
-  background-color: #fff;
-  height: 50px;
-  }
-  .thumbnail4 {
-   display: block;
-
-   margin: 1px 1px 1px 1px;
-   line-height: 1.42857143;
-   background-color: #fff;
-   height: 100px;
-   }
-
-   .thumbnail5 {
-      display: block;
-
-      margin: 2px 0px 2px 20px;
-
-      line-height: 1.42857143;
-      background-color: #fff;
-      height: 150px;
-    }
 //-----------产品主页面调整
 .product-details {
 
@@ -424,4 +446,18 @@ h1,h2,h3,h4,h5,h6{
 .form-control,{
   border-radius: 0px;
 
+}
+.table-bordered1{
+  display: block;
+  line-height: 1.42857143;
+  background-color: #fff;
+}
+.nav-pills a{
+  color:#808284;
+}
+
+.add1, .add1 a{
+  font-size: 20px;
+  color: #808284;
+  
 }
