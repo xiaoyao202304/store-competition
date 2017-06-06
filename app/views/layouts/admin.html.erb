@@ -6,12 +6,13 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
+
 <body>
   <div class="container">
     <%= render "common/navbar" %>
     <div class="row">
       <div class="col-md-2">
-        <ul class="nav nav-pills nav-stacked" style="max-width: 300px;">
+        <ul class="nav nav-pills nav-stacked" style="max-width: 100px;">
           <li> <%= link_to("Products", admin_products_path) %> </li>
           <li> <%= link_to("Orders", admin_orders_path) %> </li>
         </ul>
@@ -22,4 +23,6 @@
     </div>
   </div>
 </body>
+
+
 </html>

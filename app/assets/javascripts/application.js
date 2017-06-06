@@ -18,7 +18,7 @@
 //= require bootstrap/collapse
 //= require bootstrap/dropdown
 //= require_tree .
-
+//= require autosize
 
  // Products#show 切换显示图片
 
@@ -28,3 +28,5 @@ $(document).on('mouseover', '.list-photo', function () {
 
   $('.big-photo').find('img').attr('src', src_medium) //變更大圖圖片路徑
 })
+
+//--------

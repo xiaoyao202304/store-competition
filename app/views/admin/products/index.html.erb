@@ -2,10 +2,10 @@
 
 <h2>Product List</h2>
 
-<div class="pull-right" style="padding-bottom: 20px;">
-  <%= link_to("Add New", new_admin_product_path, class: "btn btn-checkout btn-sm") %>
+<div class="add1 pull-right" >
+  <%= link_to("New", new_admin_product_path, class: "fa fa-plus") %>
 </div>
-<table class="table table-bordered">
+<table class="table table-bordered1">
   <thead>
     <tr>
       <th>No.</th>
@@ -17,13 +17,13 @@
     </tr>
   </thead>
   <tbody>
-    <% @products.each do |product| %>
+    <% @products.each_with_index do |product, index| %>
       <tr>
-        <td><%= product.id %></td>
+        <td><%= index + 1 %></td>
         <td>
           <%= link_to product_path(product) do %>
 
-            
+
             <% if product.photos.present? %>
               <%= image_tag(product.photos[0].avatar.thumb.url, class: "thumbnail3") %>
 
@@ -36,7 +36,7 @@
         <td><%= product.price %></td>
         <td><%= product.category %></td>
         <td><%= link_to("Edit", edit_admin_product_path(product)) %>
-          <%= link_to("Delete", admin_product_path(product)) %>
+          <%= link_to("Delete", admin_product_path(product), method: :delete, data: {confirm: 'Are you sure?'}) %>
         </td>
       </tr>
     <% end %>

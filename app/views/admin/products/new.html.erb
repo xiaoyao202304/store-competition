@@ -26,8 +26,11 @@
 <div class="group col-md-12">
   <% if @product.image.present? %>
     <span>当前商品图</span><br>
-    <%= image_tag(@product.image.thumb.url) %>
-  <% end %>
+		<% @product.photos.each do |p| %>
+			<%= image_tag p.avatar.thumb.url %>
+		<% end %>
+	<% end %>
+
 </div>
 
 <div class="group col-md-12">
@@ -44,3 +47,9 @@
 <%= f.submit "Submit", data: { disable_with: "Submitting..." }, class:"btn btn-checkout" %>
 
 <% end %>
+
+<!--描述框autosize-->
+<script type="text/javascript">
+autosize($('#product_description'));
+
+</script>
